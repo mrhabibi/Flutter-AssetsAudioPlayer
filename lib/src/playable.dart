@@ -353,6 +353,15 @@ class Audio extends Playable {
 typedef PlaylistAudioReplacer = Audio Function(Audio oldAudio);
 
 class Playlist extends Playable {
+  
+  bool _autoNext = false;
+
+  bool get autoNext => _autoNext;
+
+  set autoNext(bool value) {
+    _autoNext = value;
+  }
+  
   final List<Audio> audios = [];
 
   int _startIndex = 0;
