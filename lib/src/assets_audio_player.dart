@@ -842,7 +842,7 @@ class AssetsAudioPlayer {
     bool keepLoopMode = true,
   }) async {
     if (_playlist != null) {
-      if (_playlist.playlist.autoNext == false) return false;
+      if (_playlist?.playlist?.autoNext == false) return false;
       if (loopMode.value == LoopMode.single) {
         if (!requestByUser) {
           await seek(Duration.zero);
